@@ -1,0 +1,171 @@
+.modal-lg-arr {
+    max-width: 1200px !important;
+}
+.prueba_ocultar{
+	display: none
+}
+
+.css-tooltip-php {
+  position: relative;
+  display: inline-block;
+}
+.css-tooltip-php .tt-content-php {
+  position: absolute;
+  color: white;
+  background-color: #fd7a6b;
+  font-weight: normal;
+  font-size: 13px;
+  z-index: 99999999;
+  box-sizing: border-box;
+  padding: 10px;
+  box-shadow: 0 1px 10px rgba(255, 0, 0, 0.5);
+  border-radius: 4px;
+  display: none;
+  width: 150px;
+}
+.css-tooltip-php .tt-content-php i {
+  position: absolute;
+  overflow: hidden;
+}
+.css-tooltip-php .tt-content-php i:after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #fd7a6b;
+  box-shadow: 0 1px 10px rgba(255, 0, 0, 0.5);
+}
+.css-tooltip-php.top .tt-content-php {
+  top: -10px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.css-tooltip-php.top .tt-content-php i {
+  top: 100%;
+  left: 50%;
+  margin-left: -12px;
+  width: 24px;
+  height: 12px;
+}
+.css-tooltip-php.top .tt-content-php i:after {
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.css-tooltip-php.right .tt-content-php {
+  top: 50%;
+  left: 100%;
+  margin-left: 10px;
+  transform: translate(0, -50%);
+}
+.css-tooltip-php.right .tt-content-php i {
+  top: 50%;
+  right: 100%;
+  margin-top: -12px;
+  width: 12px;
+  height: 24px;
+}
+.css-tooltip-php.right .tt-content-php i:after {
+  left: 0;
+  top: 50%;
+  transform: translate(50%, -50%) rotate(-45deg);
+}
+.css-tooltip-php.bottom .tt-content-php {
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.css-tooltip-php.bottom .tt-content-php i {
+  bottom: 100%;
+  left: 50%;
+  margin-left: -12px;
+  width: 24px;
+  height: 12px;
+}
+.css-tooltip-php.bottom .tt-content-php i:after {
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(45deg);
+}
+.css-tooltip-php.left-php .tt-content-php {
+  top: 50%;
+  right: 100%;
+  margin-right: 20px;
+  transform: translate(0, -50%);
+}
+.css-tooltip-php.left-php .tt-content-php i {
+  top: 50%;
+  left: 100%;
+  margin-top: -12px;
+  width: 12px;
+  height: 24px;
+}
+.css-tooltip-php.left-php .tt-content-php i:after {
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.css-tooltip-php:hover .tt-content-php {
+  display: block;
+}
+/*Mis estilos*/
+.fa-pencil:before {
+    color: #ffa05c;
+}
+.fa-trash:before {
+    color: #ff2e2e;
+}
+
+table.dataTable{
+   max-width: 1104px !important;
+   border-collapse: collapse !important;
+}
+div.dataTables_wrapper div.dataTables_info{
+    color: rgba(150, 150, 150, 1);
+    font-size:  12px;
+    padding-left: 15px;
+    font-style: italic 
+}
+div.dataTables_wrapper div.dataTables_length label{
+    color: rgba(150, 150, 150, 1);
+    padding-left: 15px;
+}
+select:not([size]):not([multiple]).form-control{
+    height: calc(1px + 2.25rem);
+    margin: 6px
+}
+div.dataTables_wrapper div.dataTables_filter label{
+    color: rgba(150, 150, 150, 1);
+}
+div.dataTables_wrapper div.dataTables_filter input{
+    margin-right: 15px
+}
+table.dataTable.no-footer {
+    border-bottom: 1px solid #cfcfcf;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  color: #333;
+    padding: 0;
+    margin: 1px;
+}
+fieldset {
+  overflow-y: scroll;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:active {
+    background: none;
+    box-shadow: none;
+    border-color: white;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: none;
+    box-shadow: none;
+    border-color: white;
+}
+.page-link {
+    color: #958f8f;
+}
+.page-lin:focus {
+    color: #01a9ac;
+}
+.page-link:focus, .page-link:hover {
+    color: #01a9ac;
+  }
