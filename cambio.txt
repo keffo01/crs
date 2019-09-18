@@ -1,0 +1,42 @@
+public function cambio(){
+
+	
+
+		$id = $this->input->post('id_user');
+		$sel = $this->input->post('estado_id');
+		
+		$dato =$this->Solicitud_modelo->cambiarEstado($sel, $id);
+		echo $dato;
+		$dat =$this->Solicitud_modelo->mostrarEstado($id);
+		foreach ($dat as $key) {
+			$correo_user = $key['Email'];
+			if ($sel==1) {
+
+				$asunto = 'Proceso de ingreso a Cruz Roja Salvadoreña';
+			
+				$mensaje  ='<html><head><title></title></head><body><div style="margin: auto; display: block; "><img src="http://blogs.eltiempo.com/accion-humanitaria-en-movimiento/wp-content/uploads/sites/530/2016/10/CRUZ-ROJA-1024x1024.jpg" style="margin: auto; display: block; " width="150" align="middle" height="150" align="middle"><br><p style="font-size:16px;text-align: center"><b>¡Felicidades y bienvenido a Cruz Roja Salvadoreña!</b>, tu solicitud ha sido aceptada. Tu proceso ha terminado con éxito.</p></div></body></html>';
+
+		}elseif ($sel==2) {
+
+				$asunto = 'Proceso de ingreso a Cruz Roja Salvadoreña';
+			
+				$mensaje  ='<html><head><title></title></head><body><div style="margin: auto; display: block; "><img src="http://blogs.eltiempo.com/accion-humanitaria-en-movimiento/wp-content/uploads/sites/530/2016/10/CRUZ-ROJA-1024x1024.jpg" style="margin: auto; display: block; " width="150" align="middle" height="150" align="middle"><br><p style="font-size:16px;text-align: center"> <b>¡Lo lamentamos!</b>, tu solicitud ha sido rechazada.¡Muchas gracias por participar del proceso!.</p></div></body></html>';
+		}elseif ($sel==3) {
+
+				$asunto = 'Proceso de ingreso a Cruz Roja Salvadoreña';
+
+
+				$mensaje  ='<html><head><title></title></head><body><div style="margin: auto; display: block; "><img src="http://blogs.eltiempo.com/accion-humanitaria-en-movimiento/wp-content/uploads/sites/530/2016/10/CRUZ-ROJA-1024x1024.jpg" style="margin: auto; display: block; "width="150" align="middle" height="150" align="middle"><br><p style="font-size:16px;text-align: center"><b>¡Felicidades!</b> tu solicitud esta en proceso, el siguiente paso es acceder a la <a href="http://localhost/crs">pagina de la cruz roja</a> y realizar la entrevista.¡Muchas gracias!.</p></div></body></html>';
+
+		}else{ 
+				$asunto = 'Proceso de ingreso a Cruz Roja Salvadoreña';
+
+				$mensaje  ='<html><head><title></title></head><body><div style="margin: auto; display: block; "><img src="http://blogs.eltiempo.com/accion-humanitaria-en-movimiento/wp-content/uploads/sites/530/2016/10/CRUZ-ROJA-1024x1024.jpg" style="margin: auto; display: block; "width="150" align="middle" height="150" align="middle"><br><p style="font-size:16px;text-align: center"><b>¡Felicidades!</b>, tu solicitud ha sido ingresada con exito, estas en el proceso de revisión de solicitud, mantente pendiente del correo para continuar con el proceso.¡Muchas gracias!.</p></div></body></html>';
+		}	
+		}
+				
+$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
+$cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+		mail($correo_user, $asunto, $mensaje, $cabeceras);
+		
+	}
